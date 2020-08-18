@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+
+}
+.wrapper    {
+    height: 100vh;
+}
+.container {
+    padding: 6%;
+}
+input::placeholder {
+    font-size: 1rem
+}
+
+.join_us {
+    text-align: center;
+    color: gray;
+}
+
+#footer {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+}
+
+.matched {
+    color: green;
+}
+.NotMatched {
+    color: red;
+}
+

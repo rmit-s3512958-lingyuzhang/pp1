@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Register page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h4 class="join_us">Join us</h4>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="fistName" name="firstName"
+                        placeholder="Enter Fisrt Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email"
+                        placeholder="Type you Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="remail">Retype Email address</label>
+                    <input type="email" class="form-control" id="re_email" name="remail"
+                        placeholder="Retype you Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" class="form-control" id="password" name="pass">
+                </div>
+                <div class="form-group">
+                    <label for="pass"> Retype Password</label>
+                    <input type="password" class="form-control" id="re_password" name="pass">
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="">Submit</button>
+            </form>
+        </div>
+
+        <footer id="footer" class="py-2 bg-light text-black-90">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://shareCars.com/"> shareCars.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>
