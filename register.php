@@ -1,3 +1,38 @@
+		<?php
+		// Start Session
+		session_start();
+
+		// Load PHP files for Database connection
+		require 'db_connection.php';
+		$db = DB();
+
+		$register_error_message = '';
+
+		// check Register request
+		if (!empty($_POST['btnRegister'])) {
+			if ($_POST['name'] == "") {
+				$register_error_message = 'Name field is required!';
+			} else if ($_POST['email'] == "") {
+				$register_error_message = 'Email field is required!';
+			} else if ($_POST['username'] == "") {
+				$register_error_message = 'Username field is required!';
+			} else if ($_POST['password'] == "") {
+				$register_error_message = 'Password field is required!';
+			} else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+				$register_error_message = 'Invalid email address!';
+			} else if ($app->isEmail($_POST['email'])) {
+				$register_error_message = 'Email is already in use!';
+			} else if ($app->isUsername($_POST['username'])) {
+				$register_error_message = 'Username is already in use!';
+			} else {
+				$user_id = $app->Register($_POST['name'], $_POST['email'], $_POST['username'], $_POST['password']);
+				// set session and redirect user to the profile page
+				$_SESSION['user_id'] = $user_id;
+				header("Location: confirm_google_auth.php");
+			}
+		}
+		?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +43,9 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/main.css">
     <title>Register page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
