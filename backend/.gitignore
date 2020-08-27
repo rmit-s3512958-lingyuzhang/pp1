@@ -1,0 +1,5 @@
+openapi.json
+swagger.json
+build/
+/target/
+/bin/
