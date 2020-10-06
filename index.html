@@ -76,6 +76,16 @@
     });
   </script>
 
+  <script>
+    function SignInOrOut() {
+      if (document.getElementById('sign-in').textContent == 'Sign in') {
+        window.location.href = "login.html";
+      } else {
+        firebase.auth().signOut();
+      }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -84,7 +94,7 @@
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="#">Welcome to CarShare</a>
-      <a class="btn btn-primary" href="login.html">Log In</a>
+      <a class="btn btn-primary" id="sign-in" onclick="SignInOrOut()">Sign In</a>
     </div>
   </nav>
 
@@ -150,7 +160,7 @@
 
   <div>TESTING********</div>
   <div id="sign-in-status"></div>
-  <div id="sign-in"></div>
+  <div ></div>
   <pre id="account-details"></pre>
 
 
