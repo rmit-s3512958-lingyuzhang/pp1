@@ -22,6 +22,60 @@
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
 
+  <!-- Initialize Firebase.js -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyA73FXE4JY5le6sFLQnbdvJw-wSU7f9uJQ",
+      authDomain: "carshare-285508.firebaseapp.com",
+    };
+    firebase.initializeApp(config);
+    var providerGoogleAuth = new firebase.auth.GoogleAuthProvider();
+  </script>
+
+  <!-- Tracking Auth State -->
+  <script type="text/javascript">
+    initApp = function() {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var uid = user.uid;
+          var phoneNumber = user.phoneNumber;
+          var providerData = user.providerData;
+          user.getIdToken().then(function(accessToken) {
+            document.getElementById('sign-in-status').textContent = 'Signed in';
+            document.getElementById('sign-in').textContent = 'Sign out';
+            document.getElementById('account-details').textContent = JSON.stringify({
+              displayName: displayName,
+              email: email,
+              emailVerified: emailVerified,
+              phoneNumber: phoneNumber,
+              photoURL: photoURL,
+              uid: uid,
+              accessToken: accessToken,
+              providerData: providerData
+            }, null, '  ');
+          });
+        } else {
+          // User is signed out.
+          document.getElementById('sign-in-status').textContent = 'Signed out';
+          document.getElementById('sign-in').textContent = 'Sign in';
+          document.getElementById('account-details').textContent = 'null';
+        }
+      }, function(error) {
+        console.log(error);
+      });
+    };
+
+    window.addEventListener('load', function() {
+      initApp();
+    });
+  </script>
+
 </head>
 
 <body>
@@ -93,6 +147,11 @@
       </div>
     </div>
   </section>
+
+  <div>TESTING********</div>
+  <div id="sign-in-status"></div>
+  <div id="sign-in"></div>
+  <pre id="account-details"></pre>
 
 
 

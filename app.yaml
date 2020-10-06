@@ -9,7 +9,7 @@ handlers:
   script: /index.html
 
 - url: /login.html
-  script: loginchoices.html
+  script: /loginchoices.html
 
 - url: /js
   static_dir: ./js
@@ -21,6 +21,6 @@ handlers:
   static_dir: ./vendor
 
 - url: /img
-  static_dir: img
+  static_dir: ./img
 
 
