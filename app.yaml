@@ -3,4 +3,24 @@ api_version: 1
 
 handlers:
 - url: /
-  script: register.php
+  script: /index.html
+
+- url: /index.html
+  script: /index.html
+
+- url: /login.html
+  script: loginchoices.html
+
+- url: /js
+  static_dir: ./js
+
+- url: /css
+  static_dir: ./css
+
+- url: /vendor
+  static_dir: ./vendor
+
+- url: /img
+  static_dir: img
+
+
