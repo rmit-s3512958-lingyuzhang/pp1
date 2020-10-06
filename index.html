@@ -47,9 +47,9 @@
           var phoneNumber = user.phoneNumber;
           var providerData = user.providerData;
           user.getIdToken().then(function(accessToken) {
-            document.getElementById('sign-in-status').textContent = 'Signed in';
-            document.getElementById('sign-in').textContent = 'Sign out';
-            document.getElementById('account-details').textContent = JSON.stringify({
+            document.getElementById('sign-in-status').textContent = 'Signed in'; // can remove this
+            document.getElementById('sign-in').textContent = 'Sign out'; // <- using this one to deal with the signin/out button
+            document.getElementById('account-details').textContent = JSON.stringify({ // can remove this
               displayName: displayName,
               email: email,
               emailVerified: emailVerified,
@@ -62,9 +62,9 @@
           });
         } else {
           // User is signed out.
-          document.getElementById('sign-in-status').textContent = 'Signed out';
-          document.getElementById('sign-in').textContent = 'Sign in';
-          document.getElementById('account-details').textContent = 'null';
+          document.getElementById('sign-in-status').textContent = 'Signed out'; // can remove this
+          document.getElementById('sign-in').textContent = 'Sign in'; // <- using this one to deal with the signin/out button
+          document.getElementById('account-details').textContent = 'null'; // can remove this
         }
       }, function(error) {
         console.log(error);
@@ -106,18 +106,6 @@
         <div class="col-xl-9 mx-auto">
           <h1 class="mb-5">Book a car anytime, anywhere.</h1>
         </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
-            </div>
-          </form>
-        </div>
       </div>
     </div>
   </header>
@@ -137,28 +125,28 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary" onclick="location.href = 'login.html'"></i>
+            </div>
+            <h3>Sign Up</h3>
+            <p class="lead mb-0">Sign up here to join in the CarShare freedom.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3" >
             <div class="features-icons-icon d-flex">
               <i class="icon-layers m-auto text-primary"></i>
             </div>
             <h3>Make A Booking</h3>
-            <p class="lead mb-0">Book accross multiple different vehicles at different locations.</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
-            </div>
-            <h3>Sign Up</h3>
-            <p class="lead mb-0">Sign up here to join in the CarShare freedom.</p>
+            <p class="lead mb-0">Book to access a variety of vehicles across a number of locations.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div>TESTING********</div>
+  <div><h3>**TESTING**</h3></div>
   <div id="sign-in-status"></div>
   <div ></div>
   <pre id="account-details"></pre>
