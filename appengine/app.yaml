@@ -1,6 +1,6 @@
 runtime: php55
 api_version: latest 
-application: carshare-backend
+application: carshare
 version: v1
 
 handlers:
