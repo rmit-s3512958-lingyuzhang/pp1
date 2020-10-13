@@ -3,7 +3,7 @@ require_once './session.php';
 
 use Google\Cloud\Datastore\DatastoreClient;
 
-$projectId = carshare-285508
+$projectId = carshare-285508;
 $datastore = new DatastoreClient([
   'projectId' => $projectId
 ]);
