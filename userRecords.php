@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="./style/main.css">
 
-    <title>Profile</title>
+    <title>History</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,17 +47,17 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/UserProfile.php">User Profile</a>
+                        <a class="nav-link" href="/userProfile">User Profile</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="./UserRecords.php">Account Records</a>
+                        <a class="nav-link" href="/userRecords">History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/findCars.php">Find Car</a>
+                        <a class="nav-link" href="/findCars">Find a Car</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary" onclick="signout()">Sign Out</a>
@@ -176,7 +176,7 @@
         
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="./index.php"> shareCars.com</a>
+                    <a href="/index"> shareCars.com</a>
                 </div>
                 <!-- Copyright -->
         

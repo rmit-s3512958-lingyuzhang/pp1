@@ -41,7 +41,7 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">CarShare</a>
-                <a class="btn btn-primary" href="admin.php">Admin Dashboard</a>
+                <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
                 <a class="btn btn-primary" onclick="signout()">Sign Out</a>
             </div>
         </nav>

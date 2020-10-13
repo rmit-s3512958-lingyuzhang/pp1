@@ -47,17 +47,17 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/UserProfile.php">User Profile</a>
+                        <a class="nav-link" href="/userProfile">User Profile</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="/UserRecords.php">Account Records</a>
+                        <a class="nav-link" href="/userRecords">History</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/findCars.php">Find a Car</a>
+                        <a class="nav-link" href="/findCars">Find a Car</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary" onclick="signout()">Sign Out</a>
@@ -114,8 +114,8 @@
         <footer id="footer" class="py-2 bg-light text-black-90">
     
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="./index.php"> shareCars.com</a>
+            <div class="footer-copyright text-center py-3">© 2020 Copyright: 
+                <a href="/index">shareCars.com</a>
             </div>
             <!-- Copyright -->
     

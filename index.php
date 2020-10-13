@@ -34,10 +34,10 @@
     firebase.auth().onAuthStateChanged(function (user) {
       if (user.uid == 'kawPgUKWVQg3m2LgD6QaITDTvDG2') {
         console.log('Admin is authenticated, redirecting to admin dashboard.');
-          window.location.replace('/admin.php');
+          window.location.replace('/admin');
       } else if (user) {
         console.log('User is authenticated, redirecting to findCars page.')
-        window.location.replace('/findCars.php');
+        window.location.replace('/findCars');
       } else {
         console.log('User is not authenticated.')
       }
@@ -49,7 +49,7 @@
   <!-- Redirect to login page -->
   <script>
     function goToLoginPage() {
-      window.location.href = "login.php";
+      window.location.href = "/login";
     }
   </script>
 

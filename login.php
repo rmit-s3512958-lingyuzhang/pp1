@@ -31,7 +31,7 @@
     <script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
-        signInSuccessUrl: 'index.php',
+        signInSuccessUrl: './index',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -77,7 +77,7 @@
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
         <a class="navbar-brand" href="#">Customer Login</a>
-        <a class="btn btn-primary" href="index.php">Back</a>
+        <a class="btn btn-primary" href="/index">Back</a>
       </div>
     </nav>
   

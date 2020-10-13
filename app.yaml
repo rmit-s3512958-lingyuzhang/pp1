@@ -5,31 +5,31 @@ handlers:
 - url: /
   script: /index.php
 
-- url: /index.php
+- url: /index
   script: /index.php
 
-- url: /login.php
+- url: /login
   script: /login.php
 
-- url: /admin.php
+- url: /admin
   script: /admin.php
 
-- url: /admin_addCar.php
+- url: /admin_addCar
   script: /admin_addCar.php
 
-- url: /admin_users.php
+- url: /admin_users
   script: /admin_users.php
 
-- url: /admin_userDetail.php
+- url: /admin_userDetail
   script: /admin_userDetail.php
 
-- url: /findCars.php
+- url: /findCars
   script: /findCars.php
 
-- url: /userProfile.php
+- url: /userProfile
   script: /userProfile.php
 
-- url: /userRecords.php
+- url: /userRecords
   script: /userRecords.php
 
 - url: /js
@@ -43,5 +43,14 @@ handlers:
 
 - url: /img
   static_dir: ./img
+
+- url: /datetimepicker
+  static_dir: ./datetimepicker
+
+- url: /scss
+  static_dir: ./scss
+
+- url: /style
+  static_dir: ./style
 
 

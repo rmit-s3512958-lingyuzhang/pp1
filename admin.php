@@ -40,7 +40,7 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">CarShare</a>
-                <a class="btn btn-primary" href="admin.php">Admin Dashboard</a>
+                <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
                 <a class="btn btn-primary" onclick="signout()">Sign Out</a>
             </div>
         </nav>
@@ -51,7 +51,7 @@
     <div class="card text-center">
       <div class="card-body">
         <h5 class="card-title">Cars</h5>
-        <a href="admin_addCar.php" class="btn btn-primary">Add New Car</a>
+        <a href="/admin_addCar" class="btn btn-primary">Add New Car</a>
           <p></p>
           <a href="#" class="btn btn-primary">Manage Car Info</a>
       </div>
@@ -61,7 +61,7 @@
     <div class="card text-center">
       <div class="card-body">
         <h5 class="card-title">Users</h5>
-          <a href="admin_users.php" class="btn btn-primary">Manage Users</a>
+          <a href="/admin_users" class="btn btn-primary">Manage Users</a>
        
         
       </div>
