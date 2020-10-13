@@ -1,0 +1,13 @@
+runtime: php55
+api_version: latest 
+application: carshare-backend
+version: v1
+
+handlers:
+- url: /.*
+  script: config.php
+  
+env_variables:
+   MYSQL_DSN: mysql:unix_socket=/cloudsql/carshare-backend:australia-southeast1:carshare-instance;dbname=carsharedb
+   MYSQL_USER: root
+   MYSQL_PASSWORD: ''

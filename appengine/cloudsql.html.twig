@@ -1,0 +1,24 @@
+<html>
+    <body>
+        {% if results %}
+            <h2>Users</h2>
+
+            {% for row in results %}
+                <div><strong> {{ row.email }} </strong> wrote <br> {{ row.username }} </strong> wrote <br> {{ row.firstName }} </strong> wrote <br> {{ row.lastName }}
+                </strong> wrote <br> {{ row.password }} </strong> wrote <br> {{ row.user_id }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <h2>New user</h2>
+        <form action="/" method="post">
+            <div>email: <input name="email" /></div>
+            <div>username: <input name="username" /></div>
+            <div>firstName: <input name="firstName" /></div>
+            <div>lastName: <input name="lastName" /></div>
+            <div>password: <input name="password" /></div>
+            <div>user_id: <input name="user_id" /></div>
+            <div><textarea name="content" rows="3" cols="60"></textarea></div>
+            <div><input type="submit" value="Sign up"></div>
+        </form>
+    </body>
+</html>
