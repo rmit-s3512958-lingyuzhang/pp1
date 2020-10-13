@@ -23,6 +23,16 @@
         <link href="css/landing-page.min.css" rel="stylesheet">
         <link href="css/adminAdd-page.css" rel="stylesheet">
 
+        <!-- Initialize Firebase.js -->
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+        <script src="/js/config_and_init.js"></script>
+        
+        <!-- Tracking Auth State -->
+        <script src="/js/tracking_auth_state.js"></script>
+
+        <!-- SignOut button funtion -->
+        <script src="/js/signout.js"></script>
+
     </head>
 
     <body>
@@ -31,79 +41,41 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">CarShare</a>
-                <a class="btn btn-primary" href="admin.html">Admin Dashboard</a>
+                <a class="btn btn-primary" href="admin.php">Admin Dashboard</a>
+                <a class="btn btn-primary" onclick="signout()">Sign Out</a>
             </div>
         </nav>
 
 
-        <!-- display user info -->
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-header">
-                    Lynn Z
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <label for="userID" class="col-sm-2 col-form-label">ID</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="00000" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="userFirstname" class="col-sm-2 col-form-label">First Name</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="Lynn" readonly>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="userLastname" class="col-sm-2 col-form-label">Last Name</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="Z" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="userEmail" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="email@email.com" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="userPhone" class="col-sm-2 col-form-label">Contact Number</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="0401000000" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="userLicense" class="col-sm-2 col-form-label">License</label>
-                            <div class="col-sm-10">
-                               <img src="img/vehicle.png" class="img-fluid" alt="Responsive image">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="userStatus" class="col-sm-2 col-form-label">Status</label>
-                            <div class="col-sm-10">
-                               <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="userStatus">
-                                    <label class="form-check-label" for="userStatus">
-                                        Valid
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        
-                       
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Update</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <!-- display all users -->
+        <table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">User ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Status</th>
+        <th scope="col">Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">000</th>
+      <td>Lynn</td>
+      <td>Z</td>
+      <td>Validation Required</td>
+        <td><a href="admin_userDetail.php" class="btn btn-primary">Details</a></td>
+    </tr>
+    <tr>
+      <th scope="row">001</th>
+      <td>user</td>
+      <td>2</td>
+      <td>Active</td>
+        <td><button href="admin_userDetail.php" class="btn btn-primary">Details</button></td>
+    </tr>
+    
+  </tbody>
+</table>
 
 
 

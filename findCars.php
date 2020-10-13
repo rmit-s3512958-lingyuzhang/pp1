@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="./style/main.css">
 
     <title>Profile</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="css/adminAdd-page.css" rel="stylesheet">
+
+    <!-- Initialize Firebase.js -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+    <script src="/js/config_and_init.js"></script>
+
+    <!-- Tracking Auth State -->
+    <script src="/js/tracking_auth_state.js"></script>
+
+    <!-- SignOut button funtion -->
+    <script src="/js/signout.js"></script>
+
 </head>
 
 <body>
@@ -26,32 +50,25 @@
                         <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/UserProfile.html">User Profile</a>
+                        <a class="nav-link" href="/userProfile.php">User Profile</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="./UserRecords.html">Account Records</a>
+                        <a class="nav-link" href="./user/records.php">Account Records</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/findCars.html">Find Car</a>
+                        <a class="nav-link" href="/findCars.php">Find Car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" onclick="signout()">Sign Out</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <div class="containerMapPage">
-            
-
-
                 <h2 style="text-align: center; padding: 1%;">Find Cars</h2>
-                <div id="map">
-
-            
-                </div>    
-            
-
-
-
+                <div id="map"></div>    
         </div>
 
         <footer id="footer" class="py-2 bg-light text-black-90">

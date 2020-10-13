@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="google-signin-client_id" content="316935690691-k6tb5o7lp65g9k26ulajcvrghva65e04.apps.googleusercontent.com">
+    
     <title>Login</title>
 
     <!-- Bootstrap core CSS -->
@@ -22,14 +23,7 @@
     
     <!-- Initialize Firebase.js -->
     <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
-    <script>
-      var config = {
-        apiKey: "AIzaSyA73FXE4JY5le6sFLQnbdvJw-wSU7f9uJQ",
-        authDomain: "carshare-285508.firebaseapp.com",
-      };
-      firebase.initializeApp(config);
-      var providerGoogleAuth = new firebase.auth.GoogleAuthProvider();
-    </script>
+    <script src="/js/config_and_init.js"></script>
 
     <!-- Initialize Firebase.js Widget UI Config-->
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
@@ -37,7 +31,7 @@
     <script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
-        signInSuccessUrl: 'index.html',
+        signInSuccessUrl: 'index.php',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -83,6 +77,7 @@
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
         <a class="navbar-brand" href="#">Customer Login</a>
+        <a class="btn btn-primary" href="index.php">Back</a>
       </div>
     </nav>
   

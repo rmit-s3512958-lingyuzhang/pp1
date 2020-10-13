@@ -23,6 +23,15 @@
         <link href="css/landing-page.min.css" rel="stylesheet">
         <link href="css/adminAdd-page.css" rel="stylesheet">
 
+        <!-- Initialize Firebase.js -->
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+        <script src="/js/config_and_init.js"></script>
+        
+        <!-- Tracking Auth State -->
+        <script src="/js/tracking_auth_state.js"></script>
+
+        <!-- SignOut button funtion -->
+        <script src="/js/signout.js"></script>
     </head>
 
     <body>
@@ -31,98 +40,49 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">CarShare</a>
-                <a class="btn btn-primary" href="admin.html">Admin Dashboard</a>
+                <a class="btn btn-primary" href="admin.php">Admin Dashboard</a>
+                <a class="btn btn-primary" onclick="signout()">Sign Out</a>
             </div>
         </nav>
 
 
-        <!-- car info -->
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-header">
-                    Add New Car
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <label for="carId" class="col-sm-2 col-form-label">ID</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="00000" readonly>
-                                <small id="idHelp" class="form-text text-muted">This is an auto generated ID.</small>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="carLocation" class="col-sm-2 col-form-label">Location</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carLocation">
-                            </div>
-                        </div>
+        <div class="row">
+  <div class="col-sm-6">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Cars</h5>
+        <a href="admin_addCar.php" class="btn btn-primary">Add New Car</a>
+          <p></p>
+          <a href="#" class="btn btn-primary">Manage Car Info</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Users</h5>
+          <a href="admin_users.php" class="btn btn-primary">Manage Users</a>
+       
+        
+      </div>
+    </div>
+  </div>
+            <div class="col-sm-6">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Bookings</h5>
+          <a href="#" class="btn btn-primary">Manage Booking</a>
+        <p></p>
+        <a href="#" class="btn btn-primary">View Booking History</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-                        <div class="form-group row">
-                            <div class="col-sm-2">Status</div>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="carStatus">
-                                    <label class="form-check-label" for="carStatus">
-                                        Available Now
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                         <hr class="rounded">
-                        <div class="form-group row">
-                            <label for="carPlate" class="col-sm-2 col-form-label">Plate</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carPlate">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="carMake" class="col-sm-2 col-form-label">Make</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carMake">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="carModel" class="col-sm-2 col-form-label">Model</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carModel">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="carBodytype" class="col-sm-2 col-form-label">Body Type</label>
-                            <div class="col-sm-10">
-                                <select class="form-control" id="carBodytype">
-                                    <option>SUV</option>
-                                    <option>Sedan</option>
-                                    <option>Wagon</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="carColor" class="col-sm-2 col-form-label">Color</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carColor">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="carPic" class="col-sm-2 col-form-label">Photo Upload</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control-file" id="carPic">
-                            </div>
-                        </div>
-
-                       
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<div><h3>**TESTING**</h3></div>
+  <div id="sign-in-status"></div>
+  <div ></div>
+  <pre id="account-details"></pre>
 
 
 

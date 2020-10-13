@@ -24,65 +24,32 @@
 
   <!-- Initialize Firebase.js -->
   <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
-  <script>
-    var config = {
-      apiKey: "AIzaSyA73FXE4JY5le6sFLQnbdvJw-wSU7f9uJQ",
-      authDomain: "carshare-285508.firebaseapp.com",
-    };
-    firebase.initializeApp(config);
-    var providerGoogleAuth = new firebase.auth.GoogleAuthProvider();
-  </script>
-
+  <script src="/js/config_and_init.js"></script>
+  
   <!-- Tracking Auth State -->
-  <script type="text/javascript">
-    initApp = function() {
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          var displayName = user.displayName;
-          var email = user.email;
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var uid = user.uid;
-          var phoneNumber = user.phoneNumber;
-          var providerData = user.providerData;
-          user.getIdToken().then(function(accessToken) {
-            document.getElementById('sign-in-status').textContent = 'Signed in'; // can remove this
-            document.getElementById('sign-in').textContent = 'Sign out'; // <- using this one to deal with the signin/out button
-            document.getElementById('account-details').textContent = JSON.stringify({ // can remove this
-              displayName: displayName,
-              email: email,
-              emailVerified: emailVerified,
-              phoneNumber: phoneNumber,
-              photoURL: photoURL,
-              uid: uid,
-              accessToken: accessToken,
-              providerData: providerData
-            }, null, '  ');
-          });
-        } else {
-          // User is signed out.
-          document.getElementById('sign-in-status').textContent = 'Signed out'; // can remove this
-          document.getElementById('sign-in').textContent = 'Sign in'; // <- using this one to deal with the signin/out button
-          document.getElementById('account-details').textContent = 'null'; // can remove this
-        }
-      }, function(error) {
-        console.log(error);
-      });
-    };
+  <script src="/js/tracking_auth_state.js"></script>
 
-    window.addEventListener('load', function() {
-      initApp();
+  <!-- Redirect users that are signed in as required -->
+  <script>
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user.uid == 'kawPgUKWVQg3m2LgD6QaITDTvDG2') {
+        console.log('Admin is authenticated, redirecting to admin dashboard.');
+          window.location.replace('/admin.php');
+      } else if (user) {
+        console.log('User is authenticated, redirecting to findCars page.')
+        window.location.replace('/findCars.php');
+      } else {
+        console.log('User is not authenticated.')
+      }
+    }, function (error) {
+      console.log(error);
     });
   </script>
 
+  <!-- Redirect to login page -->
   <script>
-    function SignInOrOut() {
-      if (document.getElementById('sign-in').textContent == 'Sign in') {
-        window.location.href = "login.html";
-      } else {
-        firebase.auth().signOut();
-      }
+    function goToLoginPage() {
+      window.location.href = "login.php";
     }
   </script>
 
@@ -94,7 +61,7 @@
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="#">Welcome to CarShare</a>
-      <a class="btn btn-primary" id="sign-in" onclick="SignInOrOut()">Sign In</a>
+      <a class="btn btn-primary" id="sign-in" onclick="goToLoginPage()">Sign In</a>
     </div>
   </nav>
 
@@ -127,7 +94,7 @@
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary" onclick="location.href = 'login.html'"></i>
+              <i class="icon-check m-auto text-primary" onclick="goToLoginPage()"></i>
             </div>
             <h3>Sign Up</h3>
             <p class="lead mb-0">Sign up here to join in the CarShare freedom.</p>
@@ -136,7 +103,7 @@
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3" >
             <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+              <i class="icon-layers m-auto text-primary" onclick="goToLoginPage()"></i>
             </div>
             <h3>Make A Booking</h3>
             <p class="lead mb-0">Book to access a variety of vehicles across a number of locations.</p>

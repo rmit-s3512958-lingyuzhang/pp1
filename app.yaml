@@ -3,13 +3,34 @@ api_version: 1
 
 handlers:
 - url: /
-  script: /index.html
+  script: /index.php
 
-- url: /index.html
-  script: /index.html
+- url: /index.php
+  script: /index.php
 
-- url: /login.html
-  script: /loginchoices.html
+- url: /login.php
+  script: /login.php
+
+- url: /admin.php
+  script: /admin.php
+
+- url: /admin_addCar.php
+  script: /admin_addCar.php
+
+- url: /admin_users.php
+  script: /admin_users.php
+
+- url: /admin_userDetail.php
+  script: /admin_userDetail.php
+
+- url: /findCars.php
+  script: /findCars.php
+
+- url: /userProfile.php
+  script: /userProfile.php
+
+- url: /userRecords.php
+  script: /userRecords.php
 
 - url: /js
   static_dir: ./js
