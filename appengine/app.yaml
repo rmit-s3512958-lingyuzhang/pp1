@@ -8,7 +8,4 @@ handlers:
 - url: /.*
   script: main.app
   
-env_variables:
-   MYSQL_DSN: mysql:unix_socket=/cloudsql/carshare-backend:australia-southeast1:carshare-instance;dbname=carsharedb
-   MYSQL_USER: root
-   MYSQL_PASSWORD: ''
+
