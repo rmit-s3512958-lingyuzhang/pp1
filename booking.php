@@ -42,10 +42,31 @@
     <body>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="/index">Welcome to CarShare</a>
-                <a class="btn btn-primary" href="/login">Sign Out</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">CarShare</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/booking">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/userProfile">User Profile</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/userRecords">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/findCars">Find a Car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" onclick="signout()">Sign Out</a>
+                    </li>
+                </ul>
             </div>
         </nav>
 
