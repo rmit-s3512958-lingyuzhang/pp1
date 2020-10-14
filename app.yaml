@@ -47,6 +47,12 @@ handlers:
 - url: /about
   script: /about.php
 
+- url: /booking
+  script: /booking.php
+
+- url: /contact
+  script: /contact.php
+
 - url: /js
   static_dir: ./js
 

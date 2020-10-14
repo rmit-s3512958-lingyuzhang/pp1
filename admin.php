@@ -73,7 +73,7 @@
         <h5 class="card-title">Bookings</h5>
           <a href="/admin_bookings" class="btn btn-primary">Manage Bookings</a>
         <p></p>
-        <a href="#" class="btn btn-primary">View Booking History</a>
+        <!-- <a href="#" class="btn btn-primary">View Booking History</a> -->
       </div>
     </div>
   </div>

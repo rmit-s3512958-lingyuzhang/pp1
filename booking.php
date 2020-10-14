@@ -26,6 +26,17 @@
         <!-- Custom styles for this template -->
         <link href="css/landing-page.min.css" rel="stylesheet">
 
+
+        <!-- Initialize Firebase.js -->
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+        <script src="/js/config_and_init.js"></script>
+        
+        <!-- Tracking Auth State -->
+        <script src="/js/tracking_auth_state.js"></script>
+
+        <!-- SignOut button funtion -->
+        <script src="/js/signout.js"></script>
+
     </head>
 
     <body>
@@ -33,8 +44,8 @@
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Welcome to CarShare</a>
-                <a class="btn btn-primary" href="login.html">Log In</a>
+                <a class="navbar-brand" href="/index">Welcome to CarShare</a>
+                <a class="btn btn-primary" href="/login">Sign Out</a>
             </div>
         </nav>
 
@@ -71,7 +82,7 @@
         </div>
         <div class="card-group">
             <div class="card">
-                <a class="btn btn-primary btn-lg" href="findCars.html">View Cars</a>
+                <a class="btn btn-primary btn-lg" href="/findCars">View Cars</a>
             </div>
             </div>
 
@@ -91,7 +102,7 @@
 
                     <!-- Copyright -->
                     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                        <a href="https://shareCars.com/"> CarShare.com</a>
+                        <a href="/index"> CarShare.com</a>
                     </div>
                     <!-- Copyright -->
 

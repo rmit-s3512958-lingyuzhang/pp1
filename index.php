@@ -36,8 +36,8 @@
         console.log('Admin is authenticated, redirecting to admin dashboard.');
           window.location.replace('/admin');
       } else if (user) {
-        console.log('User is authenticated, redirecting to findCars page.')
-        window.location.replace('/findCars');
+        console.log('User is authenticated, redirecting to booking page.')
+        window.location.replace('/booking');
       } else {
         console.log('User is not authenticated.')
       }

@@ -64,7 +64,7 @@
                     <td>Lynn</td>
                     <td>Z</td>
                     <td>Validation Required</td>
-                    <td><a href="admin_userDetail.php" class="btn btn-primary">Details</a></td>
+                    <td><a href="/admin_userDetail" class="btn btn-primary">Details</a></td>
                 </tr>
 
 

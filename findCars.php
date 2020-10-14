@@ -151,7 +151,7 @@
         </nav>
 
         <div class="containerMapPage">
-                <h2 style="text-align: center; padding: 1%;">Find Cars</h2>
+                <h2 style="text-align: center; padding: 1%;">Find a Car</h2>
                 <div id="map"></div>    
         </div>
 

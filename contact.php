@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Welcome to CarShare</a>
+      <a class="navbar-brand" href="/index">Welcome to CarShare</a>
     </div>
   </nav>
 
@@ -57,7 +57,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://shareCars.com/"> CarShare.com</a>
+        <a href="/index"> CarShare.com</a>
       </div>
       <!-- Copyright -->
 
