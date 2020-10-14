@@ -23,16 +23,6 @@
         <link href="css/landing-page.min.css" rel="stylesheet">
         <link href="css/adminAdd-page.css" rel="stylesheet">
 
-        <!-- Initialize Firebase.js -->
-        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
-        <script src="/js/config_and_init.js"></script>
-        
-        <!-- Tracking Auth State -->
-        <script src="/js/tracking_auth_state.js"></script>
-
-        <!-- SignOut button funtion -->
-        <script src="/js/signout.js"></script>
-
     </head>
 
     <body>
@@ -40,20 +30,18 @@
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#">CarShare</a>
-                <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
-                <a class="btn btn-primary" onclick="signout()">Sign Out</a>
+                <a class="navbar-brand" href="index.html">CarShare</a>
+                <a class="btn btn-primary" href="admin.html">Admin Dashboard</a>
             </div>
         </nav>
 
 
-        <!-- display all users -->
+        <!-- display all bookings -->
         <table class="table">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col">User ID</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
+                    <th scope="col">Booking ID</th>
+                    <th scope="col">Location</th>
                     <th scope="col">Status</th>
                     <th scope="col">Detail</th>
                 </tr>
@@ -61,20 +49,18 @@
             <tbody>
                 <tr>
                     <th scope="row">000</th>
-                    <td>Lynn</td>
-                    <td>Z</td>
-                    <td>Validation Required</td>
-                    <td><a href="admin_userDetail.php" class="btn btn-primary">Details</a></td>
+                    <td>Melbourne</td>
+                    <td>Past Booking</td>
+                    <td><a href="admin_bookingDetail.html" class="btn btn-primary">Details</a></td>
                 </tr>
-
-
             </tbody>
         </table>
 
 
 
         <!-- Footer -->
-      
+
+
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

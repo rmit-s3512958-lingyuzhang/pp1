@@ -113,10 +113,10 @@
     </div>
   </section>
 
-  <div><h3>**TESTING**</h3></div>
+  <!-- <div><h3>**TESTING**</h3></div>
   <div id="sign-in-status"></div>
   <div ></div>
-  <pre id="account-details"></pre>
+  <pre id="account-details"></pre> -->
 
 
 
