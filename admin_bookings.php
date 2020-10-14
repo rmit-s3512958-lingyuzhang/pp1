@@ -23,6 +23,16 @@
         <link href="css/landing-page.min.css" rel="stylesheet">
         <link href="css/adminAdd-page.css" rel="stylesheet">
 
+        <!-- Initialize Firebase.js -->
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+        <script src="/js/config_and_init.js"></script>
+        
+        <!-- Tracking Auth State -->
+        <script src="/js/tracking_auth_state.js"></script>
+
+        <!-- SignOut button funtion -->
+        <script src="/js/signout.js"></script>
+
     </head>
 
     <body>
@@ -30,8 +40,8 @@
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">CarShare</a>
-                <a class="btn btn-primary" href="admin.html">Admin Dashboard</a>
+                <a class="navbar-brand" href="/index">CarShare</a>
+                <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
             </div>
         </nav>
 
@@ -51,7 +61,7 @@
                     <th scope="row">000</th>
                     <td>Melbourne</td>
                     <td>Past Booking</td>
-                    <td><a href="admin_bookingDetail.html" class="btn btn-primary">Details</a></td>
+                    <td><a href="/admin_bookingDetail" class="btn btn-primary">Details</a></td>
                 </tr>
             </tbody>
         </table>
@@ -70,7 +80,7 @@
 
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://shareCars.com/"> CarShare.com</a>
+                    <a href="/index"> CarShare.com</a>
                 </div>
                 <!-- Copyright -->
 

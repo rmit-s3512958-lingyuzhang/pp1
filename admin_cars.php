@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+  <head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <title>CarShare</title>
+    <title>CarShare</title>
 
-        <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom fonts for this template -->
-        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
-              type="text/css">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
 
-        <!-- Custom styles for this template -->
-        <link href="css/landing-page.min.css" rel="stylesheet">
-        <link href="css/adminAdd-page.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="css/adminAdd-page.css" rel="stylesheet">
 
-    </head>
+    <!-- Initialize Firebase.js -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+    <script src="/js/config_and_init.js"></script>
+    
+    <!-- Tracking Auth State -->
+    <script src="/js/tracking_auth_state.js"></script>
+
+    <!-- SignOut button funtion -->
+    <script src="/js/signout.js"></script>
+
+  </head>
 
     <body>
 
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">CarShare</a>
-                <a class="btn btn-primary" href="admin.html">Admin Dashboard</a>
+                <a class="navbar-brand" href="/index">CarShare</a>
+                <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
             </div>
         </nav>
 
@@ -56,7 +66,7 @@
       <td>xxxxx</td>
       <td>Toyota</td>
         <td>SUV</td>
-        <td><a href="admin_carDetail.html" class="btn btn-primary">Details</a></td>
+        <td><a href="/admin_carDetail" class="btn btn-primary">Details</a></td>
         
     </tr>
     
@@ -81,7 +91,7 @@
 
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://shareCars.com/"> CarShare.com</a>
+                    <a href="/index"> CarShare.com</a>
                 </div>
                 <!-- Copyright -->
 

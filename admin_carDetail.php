@@ -23,6 +23,16 @@
         <link href="css/landing-page.min.css" rel="stylesheet">
         <link href="css/adminAdd-page.css" rel="stylesheet">
 
+        <!-- Initialize Firebase.js -->
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+        <script src="/js/config_and_init.js"></script>
+        
+        <!-- Tracking Auth State -->
+        <script src="/js/tracking_auth_state.js"></script>
+
+        <!-- SignOut button funtion -->
+        <script src="/js/signout.js"></script>
+
     </head>
 
     <body>
@@ -30,70 +40,80 @@
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">CarShare</a>
-                <a class="btn btn-primary" href="admin.html">Admin Dashboard</a>
+                <a class="navbar-brand" href="/index">CarShare</a>
+                <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
             </div>
         </nav>
 
 
-        <!-- display booking info -->
+        <!-- display car info -->
         <div class="container-fluid">
             <div class="card">
-                
+                <div class="card-header">
+                    000
+                </div>
                 <div class="card-body">
                     <form>
                         <div class="form-group row">
-                            <label for="bookingID" class="col-sm-2 col-form-label">BookingID</label>
+                            <label for="carId" class="col-sm-2 col-form-label">ID</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="text" placeholder="00000" readonly>
-                                
+                                <small id="idHelp" class="form-text text-muted">This is an auto generated ID.</small>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="carID" class="col-sm-2 col-form-label">CarID</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="00000" readonly>
-                                <a href="admin_carDetail.html" class="form-control btn btn-primary">Car Details</a>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="userID" class="col-sm-2 col-form-label">UserID</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="00000" readonly>
-                                <a href="admin_userDetail.html" class="form-control btn btn-primary">User Details</a>
-                            </div>
-                            
                         </div>
                         <div class="form-group row">
                             <label for="carLocation" class="col-sm-2 col-form-label">Location</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="text" placeholder="Melbourne" readonly>
                             </div>
-                            
                         </div>
+
                         <div class="form-group row">
-                            <label for="bookingStartTime" class="col-sm-2 col-form-label">From</label>
+                            <div class="col-sm-2">Status</div>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="2020/09/09 14:30" readonly>
-                            </div>
-                            
-                        </div>
-                        <div class="form-group row">
-                            <label for="bookingEndTime" class="col-sm-2 col-form-label">To</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="2020/09/09 17:30" readonly>
-                            </div>
-                            
-                        </div>
-    
-                        <div class="form-group row">
-                            <label for="userStatus" class="col-sm-2 col-form-label">Status</label>
-                            <div class="col-sm-10">
-                               <input class="form-control" type="text" placeholder="Past Booking" readonly>
+                                <input class="form-control" type="text" placeholder="Available" readonly>
                             </div>
                         </div>
-                       
-                        
+                         
+                        <div class="form-group row">
+                            <label for="carPlate" class="col-sm-2 col-form-label">Plate</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" placeholder="00000" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="carMake" class="col-sm-2 col-form-label">Make</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" placeholder="Toyota" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="carModel" class="col-sm-2 col-form-label">Model</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" placeholder="xxxxx" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="carBodytype" class="col-sm-2 col-form-label">Body Type</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" placeholder="SUV" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="carColor" class="col-sm-2 col-form-label">Color</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" placeholder="Black" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="carPic" class="col-sm-2 col-form-label">Car Image</label>
+                            <div class="col-sm-10">
+                                <img src="img/vehicle.png" class="img-fluid" alt="vehicle image">
+                            </div>
+                        </div>
+
                        
                         
                     </form>
@@ -105,6 +125,7 @@
 
         <!-- Footer -->
         
+
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -114,7 +135,7 @@
 
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://shareCars.com/"> CarShare.com</a>
+                    <a href="/index"> CarShare.com</a>
                 </div>
                 <!-- Copyright -->
 

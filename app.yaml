@@ -23,6 +23,18 @@ handlers:
 - url: /admin_userDetail
   script: /admin_userDetail.php
 
+- url: /admin_bookings
+  script: /admin_bookings.php
+
+- url: /admin_bookingDetail
+  script: /admin_bookingDetail.php
+
+- url: /admin_cars
+  script: /admin_cars.php
+
+- url: /admin_carDetail
+  script: /admin_carDetail.php
+
 - url: /findCars
   script: /findCars.php
 
@@ -31,6 +43,9 @@ handlers:
 
 - url: /userRecords
   script: /userRecords.php
+
+- url: /about
+  script: /about.php
 
 - url: /js
   static_dir: ./js

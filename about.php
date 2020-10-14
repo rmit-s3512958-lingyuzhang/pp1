@@ -23,6 +23,16 @@
   <link href="css/landing-page.min.css" rel="stylesheet">
     <link href="css/infoPages.css" rel="stylesheet">
 
+  <!-- Initialize Firebase.js -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+  <script src="/js/config_and_init.js"></script>
+  
+  <!-- Tracking Auth State -->
+  <script src="/js/tracking_auth_state.js"></script>
+
+  <!-- SignOut button funtion -->
+  <script src="/js/signout.js"></script>
+
 </head>
 
 <body>
@@ -59,7 +69,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://shareCars.com/"> CarShare.com</a>
+        <a href="/index"> CarShare.com</a>
       </div>
       <!-- Copyright -->
 
