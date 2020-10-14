@@ -5,7 +5,7 @@ version: v1
 
 handlers:
 - url: /.*
-  script: config.php
+  script: main.app
   
 env_variables:
    MYSQL_DSN: mysql:unix_socket=/cloudsql/carshare-backend:australia-southeast1:carshare-instance;dbname=carsharedb
