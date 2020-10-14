@@ -2,6 +2,7 @@ runtime: python27
 api_version: latest 
 application: carshare
 version: v1
+threadsafe: true
 
 handlers:
 - url: /.*
