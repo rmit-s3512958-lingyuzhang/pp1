@@ -1,0 +1,8 @@
+3. Data management information (data.txt) which describes the exact type of DB, the version and the 
+DB connection address if it is on the cloud with authorisation information and any other necessary information 
+
+Google cloud platform DataStore (noSQl) latest 
+https://console.cloud.google.com/datastore/entities;kind=Car;ns=__$DEFAULT$__/query/kind?project=carshare-285508
+
+Google source repository 
+https://source.cloud.google.com/carshare-285508?project=carshare-285508&_ga=2.204948816.-1188773066.1596615032
