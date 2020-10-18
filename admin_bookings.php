@@ -40,20 +40,18 @@
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#">CarShare</a>
+                <a class="navbar-brand" href="/index">CarShare</a>
                 <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
-                <a class="btn btn-primary" onclick="signout()">Sign Out</a>
             </div>
         </nav>
 
 
-        <!-- display all users -->
+        <!-- display all bookings -->
         <table class="table">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col">User ID</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
+                    <th scope="col">Booking ID</th>
+                    <th scope="col">Location</th>
                     <th scope="col">Status</th>
                     <th scope="col">Detail</th>
                 </tr>
@@ -61,20 +59,18 @@
             <tbody>
                 <tr>
                     <th scope="row">000</th>
-                    <td>Lynn</td>
-                    <td>Z</td>
-                    <td>Validation Required</td>
-                    <td><a href="/admin_userDetail" class="btn btn-primary">Details</a></td>
+                    <td>Melbourne</td>
+                    <td>Past Booking</td>
+                    <td><a href="/admin_bookingDetail" class="btn btn-primary">Details</a></td>
                 </tr>
-
-
             </tbody>
         </table>
 
 
 
         <!-- Footer -->
-      
+
+
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -84,7 +80,7 @@
 
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://shareCars.com/"> CarShare.com</a>
+                    <a href="/index"> CarShare.com</a>
                 </div>
                 <!-- Copyright -->
 

@@ -40,18 +40,17 @@
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#">CarShare</a>
+                <a class="navbar-brand" href="/index">CarShare</a>
                 <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
-                <a class="btn btn-primary" onclick="signout()">Sign Out</a>
             </div>
         </nav>
 
 
-        <!-- car info -->
+        <!-- display car info -->
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header">
-                    Add New Car
+                    000
                 </div>
                 <div class="card-body">
                     <form>
@@ -65,71 +64,58 @@
                         <div class="form-group row">
                             <label for="carLocation" class="col-sm-2 col-form-label">Location</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carLocation">
+                                <input class="form-control" type="text" placeholder="Melbourne" readonly>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-sm-2">Status</div>
                             <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="carStatus">
-                                    <label class="form-check-label" for="carStatus">
-                                        Available Now
-                                    </label>
-                                </div>
+                                <input class="form-control" type="text" placeholder="Available" readonly>
                             </div>
                         </div>
-                         <hr class="rounded">
+                         
                         <div class="form-group row">
                             <label for="carPlate" class="col-sm-2 col-form-label">Plate</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carPlate">
+                                <input class="form-control" type="text" placeholder="00000" readonly>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="carMake" class="col-sm-2 col-form-label">Make</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carMake">
+                                <input class="form-control" type="text" placeholder="Toyota" readonly>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="carModel" class="col-sm-2 col-form-label">Model</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carModel">
+                                <input class="form-control" type="text" placeholder="xxxxx" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="carBodytype" class="col-sm-2 col-form-label">Body Type</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="carBodytype">
-                                    <option>SUV</option>
-                                    <option>Sedan</option>
-                                    <option>Wagon</option>
-                                </select>
+                                <input class="form-control" type="text" placeholder="SUV" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="carColor" class="col-sm-2 col-form-label">Color</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carColor">
+                                <input class="form-control" type="text" placeholder="Black" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="carPic" class="col-sm-2 col-form-label">Photo Upload</label>
+                            <label for="carPic" class="col-sm-2 col-form-label">Car Image</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control-file" id="carPic">
+                                <img src="img/vehicle.png" class="img-fluid" alt="vehicle image">
                             </div>
                         </div>
 
                        
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
+                        
                     </form>
                 </div>
             </div>
@@ -149,7 +135,7 @@
 
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://shareCars.com/"> CarShare.com</a>
+                    <a href="/index"> CarShare.com</a>
                 </div>
                 <!-- Copyright -->
 

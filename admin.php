@@ -53,7 +53,7 @@
         <h5 class="card-title">Cars</h5>
         <a href="/admin_addCar" class="btn btn-primary">Add New Car</a>
           <p></p>
-          <a href="#" class="btn btn-primary">Manage Car Info</a>
+          <a href="/admin_cars" class="btn btn-primary">Manage Cars</a>
       </div>
     </div>
   </div>
@@ -71,18 +71,18 @@
     <div class="card text-center">
       <div class="card-body">
         <h5 class="card-title">Bookings</h5>
-          <a href="#" class="btn btn-primary">Manage Booking</a>
+          <a href="/admin_bookings" class="btn btn-primary">Manage Bookings</a>
         <p></p>
-        <a href="#" class="btn btn-primary">View Booking History</a>
+        <!-- <a href="#" class="btn btn-primary">View Booking History</a> -->
       </div>
     </div>
   </div>
 </div>
 
-<div><h3>**TESTING**</h3></div>
+<!-- <div><h3>**TESTING**</h3></div>
   <div id="sign-in-status"></div>
   <div ></div>
-  <pre id="account-details"></pre>
+  <pre id="account-details"></pre> -->
 
 
 

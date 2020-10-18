@@ -131,7 +131,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/index">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/booking">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/userProfile">User Profile</a>
@@ -151,7 +151,7 @@
         </nav>
 
         <div class="containerMapPage">
-                <h2 style="text-align: center; padding: 1%;">Find Cars</h2>
+                <h2 style="text-align: center; padding: 1%;">Find a Car</h2>
                 <div id="map"></div>    
         </div>
 

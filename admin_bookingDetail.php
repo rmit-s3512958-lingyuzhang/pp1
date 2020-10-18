@@ -40,96 +40,72 @@
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#">CarShare</a>
+                <a class="navbar-brand" href="/index">CarShare</a>
                 <a class="btn btn-primary" href="/admin">Admin Dashboard</a>
-                <a class="btn btn-primary" onclick="signout()">Sign Out</a>
             </div>
         </nav>
 
 
-        <!-- car info -->
+        <!-- display booking info -->
         <div class="container-fluid">
             <div class="card">
-                <div class="card-header">
-                    Add New Car
-                </div>
+                
                 <div class="card-body">
                     <form>
                         <div class="form-group row">
-                            <label for="carId" class="col-sm-2 col-form-label">ID</label>
+                            <label for="bookingID" class="col-sm-2 col-form-label">BookingID</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="text" placeholder="00000" readonly>
-                                <small id="idHelp" class="form-text text-muted">This is an auto generated ID.</small>
+                                
                             </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="carID" class="col-sm-2 col-form-label">CarID</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" placeholder="00000" readonly>
+                                <a href="/admin_carDetail" class="form-control btn btn-primary">Car Details</a>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="userID" class="col-sm-2 col-form-label">UserID</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" placeholder="00000" readonly>
+                                <a href="/admin_userDetail" class="form-control btn btn-primary">User Details</a>
+                            </div>
+                            
                         </div>
                         <div class="form-group row">
                             <label for="carLocation" class="col-sm-2 col-form-label">Location</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carLocation">
+                                <input class="form-control" type="text" placeholder="Melbourne" readonly>
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-2">Status</div>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="carStatus">
-                                    <label class="form-check-label" for="carStatus">
-                                        Available Now
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                         <hr class="rounded">
-                        <div class="form-group row">
-                            <label for="carPlate" class="col-sm-2 col-form-label">Plate</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carPlate">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="carMake" class="col-sm-2 col-form-label">Make</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carMake">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="carModel" class="col-sm-2 col-form-label">Model</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carModel">
-                            </div>
+                            
                         </div>
                         <div class="form-group row">
-                            <label for="carBodytype" class="col-sm-2 col-form-label">Body Type</label>
+                            <label for="bookingStartTime" class="col-sm-2 col-form-label">From</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="carBodytype">
-                                    <option>SUV</option>
-                                    <option>Sedan</option>
-                                    <option>Wagon</option>
-                                </select>
+                                <input class="form-control" type="text" placeholder="2020/09/09 14:30" readonly>
                             </div>
+                            
                         </div>
                         <div class="form-group row">
-                            <label for="carColor" class="col-sm-2 col-form-label">Color</label>
+                            <label for="bookingEndTime" class="col-sm-2 col-form-label">To</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="carColor">
+                                <input class="form-control" type="text" placeholder="2020/09/09 17:30" readonly>
                             </div>
+                            
                         </div>
+    
                         <div class="form-group row">
-                            <label for="carPic" class="col-sm-2 col-form-label">Photo Upload</label>
+                            <label for="userStatus" class="col-sm-2 col-form-label">Status</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control-file" id="carPic">
+                               <input class="form-control" type="text" placeholder="Past Booking" readonly>
                             </div>
                         </div>
-
                        
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
+                        
+                       
+                        
                     </form>
                 </div>
             </div>
@@ -139,7 +115,6 @@
 
         <!-- Footer -->
         
-
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
