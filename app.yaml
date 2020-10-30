@@ -1,0 +1,77 @@
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /
+  script: /index.php
+
+- url: /index
+  script: /index.php
+
+- url: /login
+  script: /login.php
+
+- url: /admin
+  script: /admin.php
+
+- url: /admin_addCar
+  script: /admin_addCar.php
+
+- url: /admin_users
+  script: /admin_users.php
+
+- url: /admin_userDetail
+  script: /admin_userDetail.php
+
+- url: /admin_bookings
+  script: /admin_bookings.php
+
+- url: /admin_bookingDetail
+  script: /admin_bookingDetail.php
+
+- url: /admin_cars
+  script: /admin_cars.php
+
+- url: /admin_carDetail
+  script: /admin_carDetail.php
+
+- url: /findCars
+  script: /findCars.php
+
+- url: /userProfile
+  script: /userProfile.php
+
+- url: /userRecords
+  script: /userRecords.php
+
+- url: /about
+  script: /about.php
+
+- url: /booking
+  script: /booking.php
+
+- url: /contact
+  script: /contact.php
+
+- url: /js
+  static_dir: ./js
+
+- url: /css
+  static_dir: ./css
+
+- url: /vendor
+  static_dir: ./vendor
+
+- url: /img
+  static_dir: ./img
+
+- url: /datetimepicker
+  static_dir: ./datetimepicker
+
+- url: /scss
+  static_dir: ./scss
+
+- url: /style
+  static_dir: ./style
+
+

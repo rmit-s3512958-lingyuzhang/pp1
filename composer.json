@@ -1,0 +1,7 @@
+{
+    "require": {
+        "silex/silex": "^2.3",
+        "google/cloud-datastore": "^1.0",
+        "google/cloud": "^0.72"
+    }
+}
